@@ -33,7 +33,7 @@ class coco(imdb):
     # name, paths
     self._year = year
     self._image_set = image_set
-    self._data_path = osp.join(cfg.DATA_DIR, 'coco')
+    self._data_path = osp.join(cfg.DATA_DIR, 'coco', 'MSCOCO') # cuongdd: Adjust to train on mscoco
     # load COCO API, classes, class <-> id mappings
     self._COCO = COCO(self._get_ann_file())
     cats = self._COCO.loadCats(self._COCO.getCatIds())

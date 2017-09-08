@@ -73,7 +73,7 @@ def draw_bounding_boxes(image, gt_boxes, im_info):
   gt_boxes_new[:,:4] = np.round(gt_boxes_new[:,:4].copy() / im_info[2])
   disp_image = Image.fromarray(np.uint8(image[0]))
 
-  for i in xrange(num_boxes):
+  for i in range(num_boxes):
     this_class = int(gt_boxes_new[i, 4])
     disp_image = _draw_single_box(disp_image, 
                                 gt_boxes_new[i, 0],

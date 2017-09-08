@@ -165,7 +165,7 @@ class Network(object):
         proposal_target_layer,
         [rois, roi_scores, self._gt_boxes, self._num_classes],
         [tf.float32, tf.float32, tf.float32, tf.float32, tf.float32, tf.float32],
-        name="proposal_target")
+        name="_proposal_target")
 
       rois.set_shape([cfg.TRAIN.BATCH_SIZE, 5])
       roi_scores.set_shape([cfg.TRAIN.BATCH_SIZE])
